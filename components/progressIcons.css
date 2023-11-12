@@ -6,7 +6,7 @@
     align-items: center;
     border-radius: 50%;
     color: aliceblue;
-    
+        
 }
 
 /* Media query para teléfonos */
@@ -19,7 +19,7 @@
 }
 
 .material-symbols-outlined {
-    font-size: 60px;
+    font-size: 80px;
     font-variation-settings:
     'FILL' 1,
     'wght' 500,

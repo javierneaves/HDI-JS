@@ -1,0 +1,323 @@
+<div class="mb-3">
+  <label for="vehicleYear" class="form-label fw-bold text-body-secondary"
+    >Año</label
+  >
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Selecciona año</option>
+    <option>2023</option>
+    <option>2022</option>
+    <option>2021</option>
+    <option>2020</option>
+    <option>2019</option>
+    <option>2018</option>
+    <option>2017</option>
+    <option>2016</option>
+    <option>2015</option>
+    <option>2014</option>
+    <option>2013</option>
+    <option>2012</option>
+  </select>
+</div>
+<div class="mb-3">
+  <label for="vehicleYear" class="form-label fw-bold text-body-secondary"
+    >Marca</label
+  >
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Selecciona tu marca</option>
+    <option>ACURA</option>
+    <option>ALFA ROMEO</option>
+    <option>AUDI</option>
+    <option>BAIC</option>
+    <option>BMW</option>
+    <option>BUICK</option>
+    <option>CADILLAC</option>
+    <option>CHEVROLET</option>
+    <option>CHRYSLER</option>
+    <option>DODGE</option>
+    <option>FAW</option>
+    <option>FIAT</option>
+    <option>FORD</option>
+    <option>GMC</option>
+  </select>
+</div>
+<div class="mb-3">
+  <label for="vehicleYear" class="form-label fw-bold text-body-secondary"
+    >Modelo</label
+  >
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Elige tu modelo</option>
+  </select>
+</div>
+<div class="mb-3">
+  <label for="vehicleYear" class="form-label fw-bold text-body-secondary"
+    >Versión</label
+  >
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Elige la versión de tu auto</option>
+  </select>
+</div>
+
+<fieldset
+  ng-show="vm.fieldView == 5 &amp;&amp; !vm.flagStepByStep"
+  aria-hidden="true"
+  class="ng-hide"
+>
+  <h2 class="title-extract-green">Información del Cliente</h2>
+  <div class="form-horizontal">
+    <div class="form-card">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Nombre*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.client.name"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Apellido Paterno*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.client.lastNameFather"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Apellido Materno*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.client.lastNameMother"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Fecha de Nacimiento* (AAAA-MM-DD)</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.client.birthdate"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >RFC*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.client.rfc"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Calle*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.client.address"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Colonia*</label
+            >
+            <div class="col-sm-8">
+              <select
+                class="form-control ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.colonySelected"
+                ng-options="postalCode.colony for postalCode in vm.postalCodesOptions"
+                aria-invalid="false"
+              >
+                <option disabled="" selected="selected" value="" class="">
+                  -- Seleccionar --
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Código Postal*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-not-empty"
+                readonly=""
+                ng-model="vm.postalCode"
+                aria-invalid="false"
+                style=""
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Ciudad*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                readonly=""
+                ng-model="vm.citySelected"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Estado*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                readonly=""
+                ng-model="vm.stateSelected"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Teléfono*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.client.telephone"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Número exterior*</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.client.numberExt"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label
+              class="col-sm-4 control-label"
+              style="text-transform: none; text-align: right"
+              >Número interior</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+                ng-model="vm.client.numberInt"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="title-extract-green">Información del Vehiculo</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label
+          class="col-sm-4 control-label"
+          style="text-transform: none; text-align: right"
+          >Numero de Serie*</label
+        >
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control t ng-pristine ng-untouched ng-valid ng-empty"
+            ng-model="vm.serialNumber"
+            aria-invalid="false"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ngIf: vm.userLogged != 'Invitado' -->
+  <button
+    class="btn btn-w-primary padding-btn pull-right"
+    type="submit"
+    ng-disabled="vm.createBlock"
+    ng-click="vm.checkDataClientAndVehicle('nextStep5SaveAndPay')"
+  >
+    Continuar a Pago
+  </button>
+  <button
+    class="btn btn-w-primary padding-btn pull-right"
+    type="submit"
+    ng-disabled="vm.createBlock"
+    ng-click="vm.checkDataClientAndVehicle('nextStep5Save')"
+  >
+    Guardar Cotización
+  </button>
+  <button
+    class="btn btn-cancel padding-btn pull-right"
+    type="submit"
+    ng-click="vm.backStep4()"
+  >
+    Atrás
+  </button>
+</fieldset>

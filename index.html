@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/bsStyle.css">
     <link rel="stylesheet" href="./components/progressIcons.css">
+    <link rel="stylesheet" href="./components/formAuto.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Document</title>
   </head>
@@ -90,7 +91,7 @@
           </button>
         </div>
         <div class="col text-center text-white">
-          <button class="btn btn-secondary btnBackground" disabled>
+          <button class="btn btn-secondary btnBackground" id="carProgressIcon" disabled>
             <span class="material-symbols-outlined">directions_car</span>
           </button>
         </div>
@@ -119,25 +120,18 @@
         generar tu cotización y contratación si así lo deseas.
       </h5>
     </div>
+
+    <div id="vehicleButton" class="text-center"></div>
+    
     <div class="container mt-5">
       <form id="contactForm">
-        <div class="mb-3">
-          <label for="email" class="form-label fw-bold text-body-secondary">Correo Electrónico</label>
-          <input type="email" class="form-control border-secondary " id="email" placeholder="Escribe tu correo electrónico">
-        </div>
-        <div class="mb-3">
-          <label for="tel"  class="form-label fw-bold text-body-secondary">Teléfono</label>
-          <input type="text" class="form-control border-secondary" id="tel" placeholder="Escribe tu teléfono de contacto">
-        </div>
-        <div class="container p-5 justify-content-between text-end">
-          <button type="button" class="btn btn-secondary btn-lg m-2" onclick="formName()">Anterior</button>
-          <button type="button" class="btn btn-primary btn-lg m-2" onclick="formVehicle()">Siguiente</button>
-        </div>
+        
       </form>
     </div>
 
     <!-- JS -->
     <script src="./assets/bsIndex.js"></script>
+    <script type="module" src="./components/formAuto.js"></script>
     <script type="module" src="./components/formName.js"></script>
   </body>
 </html>

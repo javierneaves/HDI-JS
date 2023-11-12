@@ -128,10 +128,10 @@ export function formName(active, formData) {
             inputNombre.className = "form-control border-danger"
             return
         } else {
-            
             formData = {  
+                ...formData,
                 nombre: inputNombre.value,
-                cp: inputCodigoPostal.value
+                cp: inputCodigoPostal.value,
             }
 
             showMailForm(formData)

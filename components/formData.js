@@ -1,3 +1,7 @@
 export function formData() {
-    let formData
+    let formData = {
+        
+    }
+
+    return formData
 }
